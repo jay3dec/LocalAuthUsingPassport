@@ -26,7 +26,8 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(passport.initialize());
 app.use(passport.session()); 
-app.use(app.router);
+// app.use(app.router);  <---- this has been deprecated
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
